@@ -1,0 +1,145 @@
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background-color: var(--black);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.2rem;
+    color: var(--white);
+}
+.rightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.colorFilter {
+    display: flex;
+    gap: 0.5rem;
+}
+.navLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.link {
+    color: gray;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.link:hover {
+    color: var(--white);
+    transition: all 0.4s;
+}
+
+.responsive-drawer{
+    display: none;
+}
+
+.toggleIcon-head {
+    color: var(--white) !important;
+}
+
+/* ------------------------------------- Button Component Css --------------------------- */
+
+.btn {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 0.5rem 1.5rem;
+    /* border-radius: 3rem; */
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid var(--blue);
+    min-width: 100px;
+}
+
+.btn:hover {
+    box-shadow: 5px 5px 10px rgba(58,128,233,0.5);
+    transition: all 0.3s;
+}
+
+.outlined-btn {
+    background-color: var(--black);
+    color: var(--white);
+    border: 2px solid var(--blue);
+    padding: 0.5rem 1.5rem;
+    /* border-radius: 3rem; */
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    cursor: pointer;
+    text-align: center;
+    min-width: 100px;
+}
+
+.outlined-btn:hover {
+    background-color: var(--blue);
+    transition: all 0.3s;
+}
+
+
+/* --------------------------------- Responsive header Code --------------------------------- */
+
+@media only screen and (max-width: 800px){
+
+    .Header {
+      padding: 1.5rem;
+    }
+    .logo {
+        font-size: 1rem;
+    }
+    .navLinks {
+        display: none;
+    }
+    .responsive-drawer {
+        display: block;
+    }
+    .mobile-view {
+         width: 40vw;
+         height: 100vh;
+         background-color: var(--black);
+         padding: 1.5rem;
+    }
+    .btn {
+        width: fit-content;
+    }
+
+    .colorFilter {
+        position: relative;
+        left: 9rem;
+    }
+}
+
+@media only screen and (max-width: 570px) {
+    .colorFilter {
+        left: 6rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .colorFilter {
+        gap: 0;
+        position: relative;
+        left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .colorFilter {
+        left: 0.5rem;
+    }
+    .Header{
+        padding: 1.5rem 0.5rem;
+    }
+}
